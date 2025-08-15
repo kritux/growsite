@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-bizon-white text-bizon-dark-blue;
+  }
+}
+
+@layer components {
+  /* Botones personalizados de Growth Bizon */
+  .btn-primary {
+    @apply bg-bizon-blue hover:bg-bizon-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-bizon-white border-2 border-bizon-blue text-bizon-blue hover:bg-bizon-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-accent {
+    @apply bg-bizon-accent hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  /* Cards personalizadas */
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-bizon-light-gray;
+  }
+  
+  .card-hover {
+    @apply transform hover:scale-105 transition-all duration-300;
+  }
+  
+  /* Inputs personalizados */
+  .input-field {
+    @apply w-full px-4 py-3 border border-bizon-light-gray rounded-lg focus:ring-2 focus:ring-bizon-blue focus:border-transparent transition-all duration-300;
+  }
+  
+  /* Gradientes personalizados */
+  .gradient-primary {
+    @apply bg-gradient-to-r from-bizon-dark-blue to-bizon-blue;
+  }
+  
+  .gradient-light {
+    @apply bg-gradient-to-r from-bizon-light-blue to-bizon-blue;
+  }
+  
+  /* Animaciones personalizadas */
+  .animate-grow {
+    animation: grow 0.5s ease-out;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
