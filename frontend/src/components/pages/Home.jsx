@@ -3,6 +3,7 @@ import HeroSection from '../home/HeroSection';
 import ServicesSection from '../home/ServicesSection';
 import ContactSection from '../home/ContactSection';
 import Footer from '../layout/Footer';
+import ResponsiveTest from '../utils/ResponsiveTest';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <ServicesSection />
       <ContactSection />
       <Footer />
+      <ResponsiveTest />
     </div>
   );
 };

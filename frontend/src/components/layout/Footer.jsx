@@ -106,64 +106,42 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <FaPhone className="w-5 h-5 text-bizon-accent" />
                 <a 
-                  href="tel:+15551234567"
+                  href="tel:+14029540039"
                   className="text-white/80 hover:text-white transition-colors duration-300"
                 >
-                  +1 (555) 123-4567
+                  +1 (402) 954-0039
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-bizon-accent" />
                 <span className="text-white/80">
-                  Miami, FL - Estados Unidos
+                  Duncan, Nebraska - Estados Unidos
                 </span>
               </div>
             </motion.div>
           </div>
 
           {/* Services Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-lg font-semibold mb-6">Servicios</h3>
-            <ul className="space-y-3">
-              {footerLinks.servicios.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.href}
-                    className="text-white/80 hover:text-bizon-accent transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold text-white mb-4">Servicios</h3>
+            <ul className="space-y-2">
+              <li><a href="/servicios#redes-sociales" className="text-gray-300 hover:text-white transition-colors duration-300">Gestión de Redes Sociales</a></li>
+              <li><a href="/servicios#seo" className="text-gray-300 hover:text-white transition-colors duration-300">SEO y Optimización</a></li>
+              <li><a href="/servicios#ai" className="text-gray-300 hover:text-white transition-colors duration-300">AI Automatización</a></li>
+              <li><a href="/servicios#web" className="text-gray-300 hover:text-white transition-colors duration-300">Desarrollo Web</a></li>
+              <li><a href="/servicios#ads" className="text-gray-300 hover:text-white transition-colors duration-300">Gestión de ADS</a></li>
             </ul>
-          </motion.div>
-
+          </div>
           {/* Company Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-lg font-semibold mb-6">Empresa</h3>
-            <ul className="space-y-3">
-              {footerLinks.empresa.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.href}
-                    className="text-white/80 hover:text-bizon-accent transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold text-white mb-4">Empresa</h3>
+            <ul className="space-y-2">
+              <li><a href="/nosotros" className="text-gray-300 hover:text-white transition-colors duration-300">Sobre Nosotros</a></li>
+              <li><a href="/portfolio" className="text-gray-300 hover:text-white transition-colors duration-300">Nuestro Trabajo</a></li>
+              <li><a href="/contacto" className="text-gray-300 hover:text-white transition-colors duration-300">Contacto</a></li>
+              <li><a href="/servicios" className="text-gray-300 hover:text-white transition-colors duration-300">Servicios</a></li>
             </ul>
-          </motion.div>
+          </div>
 
           {/* Support Links */}
           <motion.div

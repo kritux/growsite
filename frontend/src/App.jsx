@@ -1,91 +1,81 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './context/AuthContext';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
+import { useAuth } from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 import Home from './components/pages/Home';
 import Services from './components/pages/Services';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Portfolio from './components/pages/Portfolio';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 import UserDashboard from './components/dashboard/UserDashboard';
 import AdminDashboard from './components/admin/AdminDashboard';
-import { motion } from 'framer-motion';
 
-// Componente de carga
+// Loading Spinner Component
 const LoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-bizon-light-gray to-bizon-white flex items-center justify-center">
-    <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-      className="w-16 h-16 border-4 border-bizon-blue border-t-transparent rounded-full"
-    />
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-bizon-blue"></div>
   </div>
 );
 
-// Componente para rutas protegidas
+// Protected Route Component
 const ProtectedRoute = ({ children }) => {
-  const { isAuthenticated, loading } = useAuth();
-
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
-  if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
-
+  const { user, loading } = useAuth();
+  
+  if (loading) return <LoadingSpinner />;
+  if (!user) return <Navigate to="/login" />;
+  
   return children;
 };
 
-// Componente para rutas de admin
+// Admin Route Component
 const AdminRoute = ({ children }) => {
-  const { isAuthenticated, isAdmin, loading } = useAuth();
-
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
-  if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
-
-  if (!isAdmin) {
-    return <Navigate to="/dashboard" replace />;
-  }
-
+  const { user, loading, isAdmin } = useAuth();
+  
+  if (loading) return <LoadingSpinner />;
+  if (!user) return <Navigate to="/login" />;
+  if (!isAdmin) return <Navigate to="/dashboard" />;
+  
   return children;
 };
-
-
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Routes>
-          {/* Rutas públicas */}
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios" element={<Services />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-
-          {/* Rutas protegidas */}
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <UserDashboard />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Rutas de admin */}
-          <Route
-            path="/admin"
-            element={
-              <AdminRoute>
-                <AdminDashboard />
-              </AdminRoute>
-            }
-          />
-        </Routes>
+        <div className="App">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/servicios" element={<Services />} />
+              <Route path="/nosotros" element={<About />} />
+              <Route path="/contacto" element={<Contact />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route 
+                path="/dashboard" 
+                element={
+                  <ProtectedRoute>
+                    <UserDashboard />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/admin" 
+                element={
+                  <AdminRoute>
+                    <AdminDashboard />
+                  </AdminRoute>
+                } 
+              />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </Router>
     </AuthProvider>
   );

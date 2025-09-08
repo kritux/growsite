@@ -3,69 +3,248 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-  
-  body {
-    @apply bg-bizon-white text-bizon-dark-blue;
-  }
+/* Custom CSS Variables */
+:root {
+  --bizon-dark-blue: #1e3a8a;
+  --bizon-blue: #3b82f6;
+  --bizon-light-blue: #dbeafe;
+  --bizon-accent: #f59e0b;
+  --bizon-gray: #6b7280;
+  --bizon-light-gray: #f3f4f6;
+  --bizon-white: #ffffff;
 }
 
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Custom Components */
 @layer components {
-  /* Botones personalizados de Growth Bizon */
+  /* Button Styles */
   .btn-primary {
-    @apply bg-bizon-blue hover:bg-bizon-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-bizon-blue hover:bg-bizon-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg;
   }
-  
+
   .btn-secondary {
-    @apply bg-bizon-white border-2 border-bizon-blue text-bizon-blue hover:bg-bizon-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    @apply bg-bizon-light-gray hover:bg-bizon-gray text-bizon-dark-blue font-semibold py-2 px-4 rounded-lg transition-all duration-300;
   }
-  
-  .btn-accent {
-    @apply bg-bizon-accent hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
-  }
-  
-  /* Cards personalizadas */
+
+  /* Card Styles */
   .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-bizon-light-gray;
+    @apply bg-white rounded-2xl shadow-lg border border-bizon-light-gray;
   }
-  
-  .card-hover {
-    @apply transform hover:scale-105 transition-all duration-300;
-  }
-  
-  /* Inputs personalizados */
+
+  /* Input Styles */
   .input-field {
     @apply w-full px-4 py-3 border border-bizon-light-gray rounded-lg focus:ring-2 focus:ring-bizon-blue focus:border-transparent transition-all duration-300;
   }
-  
-  /* Gradientes personalizados */
-  .gradient-primary {
-    @apply bg-gradient-to-r from-bizon-dark-blue to-bizon-blue;
+
+  /* Responsive Text Utilities */
+  .text-responsive-xs { @apply text-xs sm:text-sm; }
+  .text-responsive-sm { @apply text-sm sm:text-base; }
+  .text-responsive-base { @apply text-base sm:text-lg; }
+  .text-responsive-lg { @apply text-lg sm:text-xl; }
+  .text-responsive-xl { @apply text-xl sm:text-2xl; }
+  .text-responsive-2xl { @apply text-2xl sm:text-3xl; }
+  .text-responsive-3xl { @apply text-3xl sm:text-4xl; }
+  .text-responsive-4xl { @apply text-4xl sm:text-5xl; }
+  .text-responsive-5xl { @apply text-5xl sm:text-6xl; }
+
+  /* Responsive Spacing */
+  .space-responsive-sm { @apply space-y-2 sm:space-y-3; }
+  .space-responsive-md { @apply space-y-3 sm:space-y-4; }
+  .space-responsive-lg { @apply space-y-4 sm:space-y-6; }
+  .space-responsive-xl { @apply space-y-6 sm:space-y-8; }
+  .p-responsive-sm { @apply p-3 sm:p-4; }
+  .p-responsive-md { @apply p-4 sm:p-6; }
+  .p-responsive-lg { @apply p-6 sm:p-8; }
+  .p-responsive-xl { @apply p-8 sm:p-12; }
+  .m-responsive-sm { @apply m-2 sm:m-3; }
+  .m-responsive-md { @apply m-3 sm:m-4; }
+  .m-responsive-lg { @apply m-4 sm:m-6; }
+  .m-responsive-xl { @apply m-6 sm:m-8; }
+
+  /* Responsive Grid */
+  .grid-responsive-1 { @apply grid-cols-1; }
+  .grid-responsive-2 { @apply grid-cols-1 sm:grid-cols-2; }
+  .grid-responsive-3 { @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3; }
+  .grid-responsive-4 { @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-4; }
+  .gap-responsive-sm { @apply gap-2 sm:gap-3; }
+  .gap-responsive-md { @apply gap-3 sm:gap-4; }
+  .gap-responsive-lg { @apply gap-4 sm:gap-6; }
+  .gap-responsive-xl { @apply gap-6 sm:gap-8; }
+
+  /* Responsive Flex */
+  .flex-responsive-col { @apply flex-col sm:flex-row; }
+  .flex-responsive-row { @apply flex-row sm:flex-col; }
+
+  /* Iconos Responsive */
+  .icon-responsive-sm { @apply w-3 h-3 sm:w-4 sm:h-4; }
+  .icon-responsive-md { @apply w-4 h-4 sm:w-5 sm:h-5; }
+  .icon-responsive-lg { @apply w-5 h-5 sm:w-6 sm:h-6; }
+  .icon-responsive-xl { @apply w-6 h-6 sm:w-8 sm:h-8; }
+
+  /* Botones Responsive */
+  .btn-responsive-sm { @apply px-3 py-2 sm:px-4 sm:py-2 text-sm sm:text-base; }
+  .btn-responsive-md { @apply px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base; }
+  .btn-responsive-lg { @apply px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg; }
+
+  /* Contenedores Responsive */
+  .container-responsive { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .section-responsive { @apply py-8 sm:py-12 lg:py-16; }
+  .section-responsive-lg { @apply py-12 sm:py-16 lg:py-20; }
+  .hero-responsive { @apply pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16; }
+
+  /* Container fixes */
+  .container-fix {
+    @apply w-full max-w-full overflow-x-hidden;
   }
-  
-  .gradient-light {
-    @apply bg-gradient-to-r from-bizon-light-blue to-bizon-blue;
-  }
-  
-  /* Animaciones personalizadas */
-  .animate-grow {
-    animation: grow 0.5s ease-out;
-  }
-  
-  .animate-bounce-slow {
-    animation: bounce 2s infinite;
+
+  /* Section fixes */
+  .section-fix {
+    @apply w-full max-w-full overflow-hidden;
   }
 }
 
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in { animation: fadeIn 0.6s ease-out; }
+.animate-slide-in { animation: slideIn 0.6s ease-out; }
+.animate-scale-in { animation: scaleIn 0.6s ease-out; }
+
+/* Responsive Animations */
+@media (max-width: 640px) {
+  .animate-fade-in { animation: fadeIn 0.4s ease-out; }
+  .animate-slide-in { animation: slideIn 0.4s ease-out; }
+  .animate-scale-in { animation: scaleIn 0.4s ease-out; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid var(--bizon-blue);
+  outline-offset: 2px;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--bizon-light-blue);
+  color: var(--bizon-dark-blue);
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support (Future) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles will go here */
+}
+
+/* Custom Utilities */
 @layer utilities {
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  .text-shadow-lg {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
+  .backdrop-blur-sm { backdrop-filter: blur(4px); }
+  .backdrop-blur-md { backdrop-filter: blur(8px); }
+  .backdrop-blur-lg { backdrop-filter: blur(16px); }
 }
+
+

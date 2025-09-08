@@ -99,23 +99,23 @@ const Services = () => {
     {
       name: "Carlos Rodríguez",
       company: "TechStart Solutions",
-      text: "La consultoría estratégica nos ayudó a definir una hoja de ruta clara. Ahora tenemos una estrategia digital sólida.",
+      text: "La consultoría estratégica nos ayudó a definir una hoja de ruta clara. Ahora tenemos una estrategia digital sólida y medible.",
       rating: 5
     },
     {
       name: "Ana Martínez",
-      company: "Boutique Elegance",
-      text: "El branding que crearon para nosotros es increíble. Nuestros clientes nos reconocen inmediatamente.",
+      company: "Boutique Fashion",
+      text: "El branding y diseño superaron nuestras expectativas. Nuestra marca ahora tiene una identidad visual profesional y memorable.",
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-bizon-white">
+    <div className="min-h-screen bg-gradient-to-br from-bizon-light-gray via-white to-bizon-light-blue">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-bizon-dark-blue to-bizon-blue">
+      <section className="pt-20 pb-12 sm:pt-24 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -123,63 +123,68 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Nuestros{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-yellow-300">
-                Servicios
-              </span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-bizon-dark-blue mb-4 sm:mb-6">
+              Nuestros Servicios
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Soluciones integrales de marketing digital diseñadas para impulsar 
-              el crecimiento de tu empresa y maximizar tu presencia online.
+            <p className="text-lg sm:text-xl text-bizon-gray max-w-3xl mx-auto leading-relaxed">
+              Ofrecemos soluciones integrales de marketing digital para impulsar el crecimiento de tu negocio
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gradient-to-br from-bizon-light-gray to-white">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`p-8 rounded-2xl ${service.bgColor} border ${service.borderColor} hover:shadow-2xl transition-all duration-300`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`${service.bgColor} ${service.borderColor} border rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2`}
               >
-                {/* Header */}
-                <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mr-4`}>
-                    <service.icon className="w-8 h-8 text-white" />
+                {/* Service Header */}
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-bizon-dark-blue">{service.title}</h3>
-                    <p className="text-bizon-accent font-semibold">{service.price}</p>
+                  <div className="flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-bizon-dark-blue mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-bizon-gray text-sm sm:text-base leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
 
-                {/* Description */}
-                <p className="text-bizon-gray mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
                 {/* Features */}
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-bizon-gray">
-                      <FaCheck className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-bizon-dark-blue mb-3 sm:mb-4">
+                    Incluye:
+                  </h4>
+                  <ul className="space-y-2 sm:space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start space-x-3">
+                        <FaCheck className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm sm:text-base text-bizon-gray">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                {/* CTA */}
-                <button className="w-full bg-bizon-blue hover:bg-bizon-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Solicitar Cotización
-                </button>
+                {/* Price and CTA */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
+                  <div className="text-2xl sm:text-3xl font-bold text-bizon-dark-blue">
+                    {service.price}
+                  </div>
+                  <button className="btn-primary text-sm sm:text-base px-6 sm:px-8 py-2 sm:py-3">
+                    Solicitar Cotización
+                    <FaArrowRight className="ml-2" />
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -187,42 +192,51 @@ const Services = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl font-bold text-bizon-dark-blue mb-6">
-              Lo que dicen nuestros{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-blue to-bizon-accent">
-                clientes
-              </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-bizon-dark-blue mb-4">
+              Lo que dicen nuestros clientes
             </h2>
+            <p className="text-lg sm:text-xl text-bizon-gray max-w-2xl mx-auto">
+              Descubre cómo hemos ayudado a otros negocios a alcanzar sus objetivos
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg border border-bizon-light-gray"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-bizon-light-gray rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex mb-4">
+                {/* Rating */}
+                <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="w-5 h-5 text-yellow-400" />
+                    <FaStar key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-bizon-gray mb-6 italic">"{testimonial.text}"</p>
+
+                {/* Testimonial Text */}
+                <p className="text-bizon-gray text-sm sm:text-base leading-relaxed mb-6">
+                  "{testimonial.text}"
+                </p>
+
+                {/* Author */}
                 <div>
-                  <p className="font-semibold text-bizon-dark-blue">{testimonial.name}</p>
-                  <p className="text-bizon-gray text-sm">{testimonial.company}</p>
+                  <div className="font-semibold text-bizon-dark-blue text-sm sm:text-base">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-bizon-gray text-xs sm:text-sm">
+                    {testimonial.company}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -231,27 +245,25 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-bizon-dark-blue to-bizon-blue">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-bizon-blue to-bizon-dark-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              ¿Listo para transformar tu negocio?
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
+              ¿Listo para impulsar tu negocio?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Contáctanos hoy mismo para una consulta gratuita y descubre 
-              cómo podemos ayudarte a alcanzar tus objetivos.
+            <p className="text-lg sm:text-xl text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto">
+              Contáctanos hoy mismo para obtener una consulta gratuita y descubrir cómo podemos ayudarte a alcanzar tus objetivos
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-bizon-accent hover:bg-yellow-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-white text-bizon-dark-blue hover:bg-bizon-light-gray text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Solicitar Consulta Gratuita
               </button>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-bizon-dark-blue font-semibold px-8 py-4 rounded-lg transition-all duration-300">
-                Ver Casos de Éxito
+              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-bizon-dark-blue text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+                Ver Portafolio
               </button>
             </div>
           </motion.div>

@@ -1,11 +1,11 @@
-fastapi
-uvicorn
-sqlalchemy
-psycopg2-binary
-python-dotenv
-alembic
-pydantic
-pydantic-settings
-passlib[bcrypt]
-python-jose[cryptography]
-fastapi-mail 
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+alembic==1.12.1
+python-dotenv==1.0.0
+# SQLite viene incluido con Python, no necesita instalación adicional 
