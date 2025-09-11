@@ -5,13 +5,13 @@
 
 /* Custom CSS Variables */
 :root {
-  --bizon-dark-blue: #1e3a8a;
-  --bizon-blue: #3b82f6;
-  --bizon-light-blue: #dbeafe;
-  --bizon-accent: #f59e0b;
+  --bizon-dark-blue: #031636;
+  --bizon-blue: #0295fd;
+  --bizon-light-blue: #fdfeff;
+  --bizon-accent: #422c1f;
   --bizon-gray: #6b7280;
   --bizon-light-gray: #f3f4f6;
-  --bizon-white: #ffffff;
+  --bizon-white: #fdfeff;
 }
 
 /* Base Styles */

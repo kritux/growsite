@@ -58,7 +58,7 @@ const AdminDashboard = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'active': return 'text-green-600 bg-green-100';
-      case 'pending': return 'text-yellow-600 bg-yellow-100';
+      case 'pending': return 'text-bizon-accent bg-bizon-light-gray';
       case 'inactive': return 'text-red-600 bg-red-100';
       case 'en_progreso': return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100';
@@ -82,7 +82,7 @@ const AdminDashboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-bizon-accent to-yellow-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-bizon-accent to-bizon-blue rounded-lg flex items-center justify-center">
                 <FaCog className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -150,7 +150,7 @@ const AdminDashboard = () => {
             className="card p-6"
           >
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-bizon-accent to-bizon-blue rounded-lg flex items-center justify-center mr-4">
                 <FaDollarSign className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -350,7 +350,7 @@ const AdminDashboard = () => {
                               <button className="text-bizon-blue hover:text-bizon-dark-blue">
                                 <FaEye className="w-4 h-4" />
                               </button>
-                              <button className="text-bizon-accent hover:text-yellow-600">
+                              <button className="text-bizon-accent hover:text-bizon-blue">
                                 <FaEdit className="w-4 h-4" />
                               </button>
                               <button className="text-red-500 hover:text-red-700">
@@ -479,7 +479,7 @@ const AdminDashboard = () => {
                           </p>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <span className="px-3 py-1 rounded-full text-sm font-medium text-yellow-600 bg-yellow-100">
+                          <span className="px-3 py-1 rounded-full text-sm font-medium text-bizon-accent bg-bizon-light-gray">
                             Pendiente
                           </span>
                           <button className="btn-primary text-sm px-4 py-2">

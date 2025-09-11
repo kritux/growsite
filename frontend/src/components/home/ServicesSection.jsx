@@ -60,18 +60,18 @@ const ServicesSection = () => {
       title: "Desarrollo Web",
       description: "Sitios web modernos y funcionales",
       features: ["Diseño responsive", "Optimización SEO", "Integración de APIs", "Mantenimiento"],
-      color: "from-orange-500 to-red-600",
-      bgColor: "bg-gradient-to-br from-orange-500/10 to-red-600/10",
-      borderColor: "border-orange-500/20"
+      color: "from-bizon-accent to-bizon-blue",
+      bgColor: "bg-gradient-to-br from-bizon-accent/10 to-bizon-blue/10",
+      borderColor: "border-bizon-accent/20"
     },
     {
       icon: <FaChartLine className="w-8 h-8" />,
       title: "Gestión de ADS",
       description: "Campañas publicitarias efectivas",
       features: ["Google Ads", "Facebook Ads", "Instagram Ads", "ROI tracking"],
-      color: "from-yellow-500 to-orange-600",
-      bgColor: "bg-gradient-to-br from-yellow-500/10 to-orange-600/10",
-      borderColor: "border-yellow-500/20"
+      color: "from-bizon-blue to-bizon-accent",
+      bgColor: "bg-gradient-to-br from-bizon-blue/10 to-bizon-accent/10",
+      borderColor: "border-bizon-blue/20"
     }
   ];
 
@@ -92,7 +92,7 @@ const ServicesSection = () => {
       icon: <FaTrophy className="w-8 h-8" />,
       title: "Ventaja Competitiva",
       description: "Destaca sobre tu competencia con tecnología de vanguardia",
-      color: "from-yellow-500 to-orange-600"
+      color: "from-bizon-blue to-bizon-accent"
     },
     {
       icon: <FaClock className="w-8 h-8" />,

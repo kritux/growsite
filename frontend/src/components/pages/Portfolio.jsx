@@ -168,7 +168,7 @@ const Portfolio = () => {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Nuestro{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-yellow-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-bizon-blue">
                 Portfolio
               </span>
             </h1>
@@ -238,7 +238,7 @@ const Portfolio = () => {
                     
                     {/* Featured Badge */}
                     {project.featured && (
-                      <div className="absolute top-4 left-4 bg-gradient-to-r from-bizon-accent to-yellow-400 text-bizon-dark-blue px-3 py-1 rounded-full text-xs font-bold">
+                      <div className="absolute top-4 left-4 bg-gradient-to-r from-bizon-accent to-bizon-blue text-bizon-white px-3 py-1 rounded-full text-xs font-bold">
                         ⭐ Destacado
                       </div>
                     )}
@@ -258,7 +258,7 @@ const Portfolio = () => {
                           <FaEye className="w-4 h-4" />
                           <span>Ver Detalles</span>
                         </button>
-                        <button className="bg-bizon-accent text-white p-2 rounded-lg hover:bg-yellow-500 transition-colors duration-200">
+                        <button className="bg-bizon-accent text-bizon-white p-2 rounded-lg hover:bg-bizon-blue transition-colors duration-200">
                           <FaHeart className="w-4 h-4" />
                         </button>
                       </div>

@@ -81,7 +81,7 @@ const ContactSection = () => {
       title: "Horario",
       info: "Lun - Vie: 9AM - 6PM CST",
       link: "#",
-      color: "from-orange-500 to-red-600"
+      color: "from-bizon-accent to-bizon-blue"
     }
   ];
 
@@ -132,7 +132,7 @@ const ContactSection = () => {
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
             ¿Listo para{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-yellow-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-bizon-blue">
               Transformar
             </span>{' '}
             tu Negocio?
@@ -257,7 +257,7 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-bizon-accent to-yellow-400 text-bizon-dark-blue font-semibold py-4 px-6 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-gradient-to-r from-bizon-accent to-bizon-blue text-bizon-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">

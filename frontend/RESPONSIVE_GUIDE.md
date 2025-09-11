@@ -269,7 +269,7 @@ className="space-y-6"
     <div className="card card-responsive">
       <div className="flex items-center mb-4">
         {[...Array(testimonial.rating)].map((_, i) => (
-          <FaStar key={i} className="icon-responsive-sm text-yellow-400" />
+          <FaStar key={i} className="icon-responsive-sm text-bizon-blue" />
         ))}
       </div>
       <p className="text-responsive-sm text-bizon-gray mb-6">

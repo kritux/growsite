@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         // Colores de marca Growth Bizon
-        'bizon-white': '#FFFFFF',
-        'bizon-dark-blue': '#1E3A8A',
-        'bizon-blue': '#3B82F6',
-        'bizon-light-blue': '#60A5FA',
-        'bizon-accent': '#F59E0B',
+        'bizon-white': '#FDFEFF',
+        'bizon-dark-blue': '#031636',
+        'bizon-blue': '#0295FD',
+        'bizon-light-blue': '#FDFEFF',
+        'bizon-accent': '#422C1F',
         'bizon-gray': '#6B7280',
         'bizon-light-gray': '#F3F4F6',
       },

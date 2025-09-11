@@ -78,7 +78,7 @@ const UserDashboard = () => {
     switch (status) {
       case 'completed': return 'text-green-600 bg-green-100';
       case 'in_progress': return 'text-blue-600 bg-blue-100';
-      case 'pending_approval': return 'text-yellow-600 bg-yellow-100';
+      case 'pending_approval': return 'text-bizon-accent bg-bizon-light-gray';
       case 'en_progreso': return 'text-blue-600 bg-blue-100';
       case 'pendiente': return 'text-gray-600 bg-gray-100';
       default: return 'text-gray-600 bg-gray-100';
@@ -188,7 +188,7 @@ const UserDashboard = () => {
             className="card p-6"
           >
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-bizon-accent to-bizon-blue rounded-lg flex items-center justify-center mr-4">
                 <FaClock className="w-6 h-6 text-white" />
               </div>
               <div>

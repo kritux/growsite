@@ -86,7 +86,7 @@ const HeroSection = () => {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight drop-shadow-lg"
             >
               Impulsa tu{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-yellow-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-bizon-blue">
                 crecimiento
               </span>{' '}
               con Growth Bizon

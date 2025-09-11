@@ -83,9 +83,9 @@ const Services = () => {
         "Ilustraciones y gráficos personalizados"
       ],
       price: "Desde $600/mes",
-      color: "from-orange-500 to-red-600",
-      bgColor: "bg-gradient-to-br from-orange-500/10 to-red-600/10",
-      borderColor: "border-orange-500/20"
+      color: "from-bizon-accent to-bizon-blue",
+      bgColor: "bg-gradient-to-br from-bizon-accent/10 to-bizon-blue/10",
+      borderColor: "border-bizon-accent/20"
     }
   ];
 
@@ -220,7 +220,7 @@ const Services = () => {
                 {/* Rating */}
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
+                    <FaStar key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-bizon-blue" />
                   ))}
                 </div>
 

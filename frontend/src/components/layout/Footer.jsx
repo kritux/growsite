@@ -201,7 +201,7 @@ const Footer = () => {
                   placeholder="Tu email"
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-bizon-accent focus:border-transparent transition-all duration-300"
                 />
-                <button className="px-4 py-2 bg-bizon-accent hover:bg-yellow-600 rounded-r-lg transition-colors duration-300">
+                <button className="px-4 py-2 bg-bizon-accent hover:bg-bizon-blue rounded-r-lg transition-colors duration-300">
                   Suscribirse
                 </button>
               </div>
@@ -257,7 +257,7 @@ const Footer = () => {
         transition={{ duration: 0.3 }}
         viewport={{ once: true }}
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-bizon-accent hover:bg-yellow-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-bizon-accent hover:bg-bizon-blue rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         aria-label="Volver arriba"
       >
         <FaArrowUp className="w-5 h-5 text-white" />
