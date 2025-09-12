@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaBars, 
   FaTimes, 
-  FaUser, 
-  FaRocket
+  FaUser
 } from 'react-icons/fa';
+import logoLogin from '../../assets/logo_login.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +60,11 @@ const Header = () => {
               <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-bizon-blue to-bizon-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
                 isScrolled ? 'shadow-lg' : 'shadow-2xl'
               }`}>
-                <FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                <img
+                  src={logoLogin}
+                  alt="Growth Bizon LLC"
+                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                />
               </div>
               <div className="hidden sm:block">
                 <div className={`text-xl sm:text-2xl font-bold ${
