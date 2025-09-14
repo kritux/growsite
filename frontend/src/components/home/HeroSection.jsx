@@ -19,29 +19,33 @@ const HeroSection = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleImageLoad = () => {
+  const handleVideoLoad = () => {
     setIsVideoLoaded(true);
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero Background */}
+      {/* Hero Background Video */}
       {!isMobile && (
         <div className="absolute inset-0 w-full h-full">
-          {/* Preload image */}
-          <img 
-            src="/videos/video hero.webp" 
-            alt="" 
-            className="hidden"
-            onLoad={handleImageLoad}
-          />
-          <div 
-            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
-            style={{ 
-              backgroundImage: 'url(/videos/video hero.webp)',
-              opacity: isVideoLoaded ? 1 : 0 
-            }}
-          ></div>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            onLoadedData={handleVideoLoad}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+            style={{ opacity: isVideoLoaded ? 1 : 0 }}
+          >
+            <source 
+              src="/videos/hero-background.webm" 
+              type="video/webm" 
+            />
+            {/* Fallback para navegadores que no soporten webm */}
+            <div 
+              className="w-full h-full bg-gradient-to-br from-bizon-dark-blue via-bizon-blue to-bizon-light-blue"
+            ></div>
+          </video>
           <div className="absolute inset-0 bg-gradient-to-br from-bizon-dark-blue/60 via-bizon-blue/40 to-bizon-light-blue/30"></div>
         </div>
       )}
@@ -55,13 +59,13 @@ const HeroSection = () => {
       )}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-          {/* Left Column - Content */}
+        <div className="flex justify-center items-center">
+          {/* Main Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left order-2 lg:order-1"
+            className="text-left max-w-4xl"
           >
             {/* Badge */}
             <motion.div
@@ -106,7 +110,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start"
             >
               <Link
                 to="/servicios"
@@ -130,7 +134,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-8 mt-6 sm:mt-8 lg:mt-12"
+              className="flex flex-wrap justify-start gap-3 sm:gap-4 lg:gap-8 mt-6 sm:mt-8 lg:mt-12"
             >
               <div className="text-center">
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">50+</div>
@@ -147,63 +151,6 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative order-1 lg:order-2 mb-6 lg:mb-0"
-          >
-            {/* Main Visual */}
-            <div className="relative">
-              {/* Card 1 - Hidden on mobile, visible on larger screens */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                animate={{ opacity: 1, scale: 1, rotate: -5 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                className="hidden md:block absolute top-0 left-0 w-48 lg:w-64 h-32 lg:h-40 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-4 lg:p-6 transform -rotate-6 border border-white/20"
-              >
-                <div className="flex items-center mb-2 lg:mb-3">
-                  <div className="w-2 lg:w-3 h-2 lg:h-3 bg-green-500 rounded-full mr-2"></div>
-                  <span className="text-xs lg:text-sm font-medium text-bizon-dark-blue">Crecimiento en Redes</span>
-                </div>
-                <div className="text-xl lg:text-2xl font-bold text-bizon-blue">+150%</div>
-                <div className="text-xs text-bizon-gray">Engagement rate</div>
-              </motion.div>
-
-              {/* Card 2 - Hidden on mobile, visible on larger screens */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-                animate={{ opacity: 1, scale: 1, rotate: 5 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="hidden md:block absolute top-16 lg:top-20 right-0 w-48 lg:w-64 h-32 lg:h-40 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-4 lg:p-6 transform rotate-6 border border-white/20"
-              >
-                <div className="flex items-center mb-2 lg:mb-3">
-                  <div className="w-2 lg:w-3 h-2 lg:h-3 bg-bizon-accent rounded-full mr-2"></div>
-                  <span className="text-xs lg:text-sm font-medium text-bizon-dark-blue">Conversiones</span>
-                </div>
-                <div className="text-xl lg:text-2xl font-bold text-bizon-accent">+300%</div>
-                <div className="text-xs text-bizon-gray">Lead generation</div>
-              </motion.div>
-
-              {/* Main Image/Illustration - Responsive */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-                className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 text-bizon-dark-blue text-center shadow-2xl border border-white/20 mx-auto max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg"
-              >
-                {/* Placeholder para imagen/ilustración */}
-                <div className="w-full h-32 sm:h-40 lg:h-48 xl:h-64 bg-gradient-to-br from-bizon-blue to-bizon-light-blue rounded-lg mb-3 sm:mb-4 flex items-center justify-center">
-                  <FaRocket className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 text-white" />
-                </div>
-                <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold mb-2">Estrategia Digital</h3>
-                <p className="text-xs sm:text-sm lg:text-base text-bizon-gray leading-relaxed">
-                  Soluciones personalizadas para tu negocio
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </div>
 
