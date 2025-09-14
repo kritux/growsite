@@ -59,13 +59,13 @@ const HeroSection = () => {
       )}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="flex justify-center items-center">
-          {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+          {/* Left Column - Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left max-w-4xl"
+            className="text-left order-2 lg:order-1"
           >
             {/* Badge */}
             <motion.div
@@ -110,7 +110,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start lg:justify-start"
             >
               <Link
                 to="/servicios"
@@ -151,6 +151,10 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
+          {/* Right Column - Empty space */}
+          <div className="order-1 lg:order-2 mb-6 lg:mb-0">
+            {/* Espacio vacío para mantener el layout de dos columnas */}
+          </div>
         </div>
       </div>
 
