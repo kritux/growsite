@@ -48,23 +48,26 @@ const Header = () => {
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/20' 
           : 'bg-transparent'
       }`}
+      style={{ zIndex: 50 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
+            whileHover={{ scale: 1.02 }}
+            className="flex items-center space-x-3 relative z-10"
           >
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-bizon-blue to-bizon-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
-                isScrolled ? 'shadow-lg' : 'shadow-2xl'
-              }`}>
-                <img
-                  src={logoLogin}
-                  alt="Growth Bizon LLC"
-                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
-                />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden">
+                <div className={`w-full h-full bg-gradient-to-br from-bizon-blue to-bizon-accent flex items-center justify-center group-hover:scale-105 transition-transform duration-300 relative z-10 ${
+                  isScrolled ? 'shadow-lg' : 'shadow-2xl'
+                }`}>
+                  <img
+                    src={logoLogin}
+                    alt="Growth Bizon LLC"
+                    className="w-6 h-6 sm:w-7 sm:h-7 object-contain relative z-10"
+                  />
+                </div>
               </div>
               <div className="hidden sm:block">
                 <div className={`text-xl sm:text-2xl font-bold ${
