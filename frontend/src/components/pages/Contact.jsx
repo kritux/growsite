@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Header from '../layout/Header';
-import Footer from '../layout/Footer';
 import { 
   FaEnvelope, 
   FaPhone, 
@@ -419,8 +418,6 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

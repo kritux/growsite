@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Header from '../layout/Header';
-import Footer from '../layout/Footer';
 import { 
   FaRocket, 
   FaUsers, 
@@ -374,8 +373,6 @@ const About = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Header from '../layout/Header';
-import Footer from '../layout/Footer';
 import { 
   FaInstagram, 
   FaFacebook, 
@@ -269,8 +268,6 @@ const Services = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
