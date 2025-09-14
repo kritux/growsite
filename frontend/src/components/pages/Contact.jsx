@@ -71,28 +71,28 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: "Teléfono",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+1 (402) 954-0039",
+      link: "tel:+14029540039",
       description: "Llámanos directamente"
     },
     {
       icon: FaWhatsapp,
       title: "WhatsApp",
-      value: "+1 (555) 123-4567",
-      link: "https://wa.me/15551234567",
+      value: "+1 (402) 954-0039",
+      link: "https://wa.me/14029540039",
       description: "Chatea con nosotros"
     },
     {
       icon: FaMapMarkerAlt,
-      title: "Oficina",
-      value: "123 Calle Principal, Ciudad, País",
-      link: "https://maps.app.goo.gl/example",
-      description: "Visítanos"
+      title: "Ubicación",
+      value: "Duncan, Nebraska - Estados Unidos",
+      link: "https://maps.google.com/?q=Duncan,Nebraska,USA",
+      description: "Nuestra oficina"
     },
     {
       icon: FaClock,
       title: "Horario",
-      value: "Lun - Vie: 9:00 AM - 6:00 PM",
+      value: "Lun - Vie: 9:00 AM - 6:00 PM CST",
       link: "#",
       description: "Horarios de atención"
     }
@@ -208,7 +208,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-bizon-light-gray rounded-xl focus:ring-2 focus:ring-bizon-blue focus:border-transparent transition-all duration-300"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+1 (402) 954-0039"
                       />
                     </div>
                     
@@ -410,9 +410,9 @@ const Contact = () => {
             <div className="h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-bizon-blue to-bizon-dark-blue flex items-center justify-center">
               <div className="text-center text-white">
                 <FaMapMarkerAlt className="w-16 h-16 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Mapa Interactivo</h3>
+                <h3 className="text-xl font-bold mb-2">Duncan, Nebraska</h3>
                 <p className="text-white/80">
-                  Aquí se integrará Google Maps
+                  Nuestra ubicación en Estados Unidos
                 </p>
               </div>
             </div>
