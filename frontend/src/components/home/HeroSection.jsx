@@ -19,32 +19,29 @@ const HeroSection = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleVideoLoad = () => {
+  const handleImageLoad = () => {
     setIsVideoLoaded(true);
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Hero Background */}
       {!isMobile && (
         <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            onLoadedData={handleVideoLoad}
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: isVideoLoaded ? 1 : 0 }}
-          >
-            <source 
-              src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" 
-              type="video/mp4" 
-            />
-            <div 
-              className="w-full h-full bg-gradient-to-br from-bizon-dark-blue via-bizon-blue to-bizon-light-blue"
-            ></div>
-          </video>
+          {/* Preload image */}
+          <img 
+            src="/videos/video hero.webp" 
+            alt="" 
+            className="hidden"
+            onLoad={handleImageLoad}
+          />
+          <div 
+            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+            style={{ 
+              backgroundImage: 'url(/videos/video hero.webp)',
+              opacity: isVideoLoaded ? 1 : 0 
+            }}
+          ></div>
           <div className="absolute inset-0 bg-gradient-to-br from-bizon-dark-blue/60 via-bizon-blue/40 to-bizon-light-blue/30"></div>
         </div>
       )}
