@@ -38,14 +38,14 @@ const UserDashboard = () => {
     {
       id: 2,
       name: "Marketing Digital",
-      type: "SEO, Google Ads",
+      type: "CRM, Google Ads",
       status: "pendiente",
       progress: 25,
       startDate: "2024-02-01",
       endDate: "2024-05-01",
       deliverables: [
-        { id: 4, name: "Auditoría SEO", status: "completed", date: "2024-02-05" },
-        { id: 5, name: "Estrategia de keywords", status: "in_progress", date: "2024-02-10" }
+        { id: 4, name: "Configuración GHL", status: "completed", date: "2024-02-05" },
+        { id: 5, name: "Automatización de leads", status: "in_progress", date: "2024-02-10" }
       ]
     }
   ];

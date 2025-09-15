@@ -29,10 +29,10 @@ const ServicesSection = () => {
       borderColor: "border-pink-500/20"
     },
     {
-      icon: <FaSearch className="w-8 h-8" />,
-      title: "SEO y Optimización",
-      description: "Mejora el posicionamiento de tu sitio web",
-      features: ["Auditoría SEO", "Optimización on-page", "Link building", "Monitoreo continuo"],
+      icon: <FaUsers className="w-8 h-8" />,
+      title: "CRM e Integración de Leads",
+      description: "Automatiza y gestiona tus leads con GoHighLevel",
+      features: ["Configuración GHL", "Automatización de leads", "Seguimiento de conversiones", "Integración completa"],
       color: "from-blue-500 to-cyan-600",
       bgColor: "bg-gradient-to-br from-blue-500/10 to-cyan-600/10",
       borderColor: "border-blue-500/20"
@@ -123,8 +123,8 @@ const ServicesSection = () => {
     },
     {
       title: "TechStart Solutions",
-      category: "SEO & Web",
-      result: "+150% tráfico",
+      category: "CRM & Leads",
+      result: "+200% conversiones",
       image: "bg-gradient-to-br from-blue-500 to-cyan-600"
     },
     {

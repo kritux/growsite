@@ -51,7 +51,7 @@ const AdminDashboard = () => {
 
   const pendingDeliverables = [
     { id: 1, client: "María González", service: "Redes Sociales", deliverable: "Diseños de posts", dueDate: "2024-02-15" },
-    { id: 2, client: "Carlos Rodríguez", service: "Marketing Digital", deliverable: "Reporte SEO", dueDate: "2024-02-18" },
+    { id: 2, client: "Carlos Rodríguez", service: "Marketing Digital", deliverable: "Configuración GHL", dueDate: "2024-02-18" },
     { id: 3, client: "Ana Martínez", service: "Branding", deliverable: "Logo final", dueDate: "2024-02-20" }
   ];
 

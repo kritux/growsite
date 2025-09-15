@@ -242,7 +242,7 @@ const Contact = () => {
                       <option value="consultoria">Consultoría Estratégica</option>
                       <option value="branding">Branding y Diseño</option>
                       <option value="web-development">Desarrollo Web</option>
-                      <option value="seo">SEO y Optimización</option>
+                      <option value="crm">CRM e Integración de Leads</option>
                       <option value="ads">Gestión de Anuncios</option>
                       <option value="otros">Otros</option>
                     </select>

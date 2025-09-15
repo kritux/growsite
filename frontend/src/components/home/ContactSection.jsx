@@ -94,7 +94,7 @@ const ContactSection = () => {
 
   const services = [
     "Gestión de Redes Sociales",
-    "SEO y Optimización",
+    "CRM e Integración de Leads",
     "AI Automatización",
     "Desarrollo Web",
     "Gestión de ADS",

@@ -126,7 +126,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Servicios</h3>
             <ul className="space-y-2">
               <li><a href="/servicios#redes-sociales" className="text-gray-300 hover:text-white transition-colors duration-300">Gestión de Redes Sociales</a></li>
-              <li><a href="/servicios#seo" className="text-gray-300 hover:text-white transition-colors duration-300">SEO y Optimización</a></li>
+              <li><a href="/servicios#crm" className="text-gray-300 hover:text-white transition-colors duration-300">CRM e Integración de Leads</a></li>
               <li><a href="/servicios#ai" className="text-gray-300 hover:text-white transition-colors duration-300">AI Automatización</a></li>
               <li><a href="/servicios#web" className="text-gray-300 hover:text-white transition-colors duration-300">Desarrollo Web</a></li>
               <li><a href="/servicios#ads" className="text-gray-300 hover:text-white transition-colors duration-300">Gestión de ADS</a></li>
