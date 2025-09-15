@@ -30,12 +30,12 @@ const Portfolio = () => {
     // Redes Sociales
     {
       id: 1,
-      title: "Campaña Instagram - Restaurante Gourmet",
+      title: "Gestión de Redes Sociales - Cliente Restaurante",
       category: "redes-sociales",
-      client: "La Cocina del Chef",
-      description: "Estrategia completa de redes sociales con contenido culinario, stories interactivos y campañas de engagement.",
+      client: "Cliente Confidencial",
+      description: "Estrategia completa de redes sociales con contenido creativo, stories interactivos y campañas de engagement para restaurante local.",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
-      results: ["+300% engagement", "+150% seguidores", "+200% ventas online"],
+      results: ["+250% engagement", "+120% seguidores", "+180% ventas online"],
       tags: ["Instagram", "Facebook", "Contenido Culinario", "Stories"],
       year: "2024",
       featured: true
