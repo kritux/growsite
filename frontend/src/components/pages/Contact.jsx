@@ -104,22 +104,31 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bizon-light-gray via-white to-bizon-light-blue">
+    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-bizon-light-blue/20">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-12 sm:pt-24 sm:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-bizon-dark-blue via-bizon-blue to-bizon-light-blue relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-bizon-accent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-bizon-dark-blue mb-4 sm:mb-6">
-              Contáctanos
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Contácta{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-bizon-accent to-bizon-blue">
+                nos
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl text-bizon-gray max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               ¿Listo para impulsar tu negocio? Estamos aquí para ayudarte a alcanzar tus objetivos de marketing digital
             </p>
           </motion.div>
