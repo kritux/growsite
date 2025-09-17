@@ -57,16 +57,12 @@ const HeroSection = () => {
             style={{ opacity: isVideoLoaded ? 1 : 0 }}
           >
             <source 
-              src="/videos/hero-background.mp4" 
-              type="video/mp4; codecs=avc1.42E01E" 
+              src="/videos/hero.mp4" 
+              type="video/mp4" 
             />
             <source 
               src="/videos/hero-background.webm" 
-              type="video/webm; codecs=vp8,vp9" 
-            />
-            <source 
-              src="/videos/hero-background.mov" 
-              type="video/quicktime" 
+              type="video/webm" 
             />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-bizon-dark-blue/60 via-bizon-blue/40 to-bizon-light-blue/30"></div>
