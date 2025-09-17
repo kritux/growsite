@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 const HeroSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+  const [supportsVideo, setSupportsVideo] = useState(true);
 
   // Detectar si es móvil para optimizar performance
   useEffect(() => {
@@ -19,33 +21,70 @@ const HeroSection = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Detectar compatibilidad de video
+  useEffect(() => {
+    const video = document.createElement('video');
+    const canPlayWebM = video.canPlayType('video/webm; codecs="vp8, vp9"');
+    const canPlayMP4 = video.canPlayType('video/mp4; codecs="avc1.42E01E"');
+    
+    if (!canPlayWebM && !canPlayMP4) {
+      setSupportsVideo(false);
+    }
+  }, []);
+
   const handleVideoLoad = () => {
     setIsVideoLoaded(true);
+  };
+
+  const handleVideoError = () => {
+    setVideoError(true);
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
       {/* Hero Background Video */}
-      {!isMobile && (
+      {!isMobile && supportsVideo && !videoError && (
         <div className="absolute inset-0 w-full h-full">
           <video
             autoPlay
             muted
             loop
             playsInline
+            preload="metadata"
             onLoadedData={handleVideoLoad}
+            onError={handleVideoError}
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
             style={{ opacity: isVideoLoaded ? 1 : 0 }}
           >
             <source 
-              src="/videos/hero-background.webm" 
-              type="video/webm" 
+              src="/videos/hero-background.mp4" 
+              type="video/mp4; codecs=avc1.42E01E" 
             />
-            {/* Fallback para navegadores que no soporten webm */}
-            <div 
-              className="w-full h-full bg-gradient-to-br from-bizon-dark-blue via-bizon-blue to-bizon-light-blue"
-            ></div>
+            <source 
+              src="/videos/hero-background.webm" 
+              type="video/webm; codecs=vp8,vp9" 
+            />
+            <source 
+              src="/videos/hero-background.mov" 
+              type="video/quicktime" 
+            />
           </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-bizon-dark-blue/60 via-bizon-blue/40 to-bizon-light-blue/30"></div>
+        </div>
+      )}
+
+      {/* Fallback para dispositivos móviles o cuando el video no funciona */}
+      {(isMobile || !supportsVideo || videoError) && (
+        <div className="absolute inset-0 w-full h-full">
+          <div 
+            className="w-full h-full bg-gradient-to-br from-bizon-dark-blue via-bizon-blue to-bizon-light-blue"
+            style={{
+              backgroundImage: 'url(/images/hero-fallback.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          ></div>
           <div className="absolute inset-0 bg-gradient-to-br from-bizon-dark-blue/60 via-bizon-blue/40 to-bizon-light-blue/30"></div>
         </div>
       )}
