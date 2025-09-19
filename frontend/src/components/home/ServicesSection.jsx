@@ -20,7 +20,7 @@ import {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <FaInstagram className="w-8 h-8" />,
+      icon: <img src="/images/icons/social-media.png" alt="Redes Sociales" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Gestión de Redes Sociales",
       description: "Manejo completo de redes sociales para tu negocio",
       features: ["Estrategia de contenido", "Diseño de posts", "Programación", "Análisis de resultados"],
@@ -29,7 +29,7 @@ const ServicesSection = () => {
       borderColor: "border-pink-500/20"
     },
     {
-      icon: <FaUsers className="w-8 h-8" />,
+      icon: <img src="/images/icons/crm-leads.png" alt="CRM e Integración" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "CRM e Integración de Leads",
       description: "Automatiza y gestiona tus leads con GoHighLevel",
       features: ["Configuración GHL", "Automatización de leads", "Seguimiento de conversiones", "Integración completa"],
@@ -38,7 +38,7 @@ const ServicesSection = () => {
       borderColor: "border-blue-500/20"
     },
     {
-      icon: <FaRobot className="w-8 h-8" />,
+      icon: <img src="/images/icons/ai-automation.png" alt="AI Automatización" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "AI Automatización",
       description: "Automatiza procesos con inteligencia artificial",
       features: ["Chatbots inteligentes", "Automatización de emails", "Análisis predictivo", "Optimización automática"],
@@ -47,7 +47,7 @@ const ServicesSection = () => {
       borderColor: "border-green-500/20"
     },
     {
-      icon: <FaBrain className="w-8 h-8" />,
+      icon: <img src="/images/icons/ai-agents.png" alt="AI Agents" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "AI Agents",
       description: "Agentes inteligentes para tu negocio",
       features: ["Asistentes virtuales", "Análisis de datos", "Toma de decisiones", "Aprendizaje continuo"],
@@ -56,7 +56,7 @@ const ServicesSection = () => {
       borderColor: "border-indigo-500/20"
     },
     {
-      icon: <FaCode className="w-8 h-8" />,
+      icon: <img src="/images/icons/web-development.png" alt="Desarrollo Web" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Desarrollo Web",
       description: "Sitios web modernos y funcionales",
       features: ["Diseño responsive", "Optimización SEO", "Integración de APIs", "Mantenimiento"],
