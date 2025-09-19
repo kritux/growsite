@@ -65,7 +65,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-accent/20"
     },
     {
-      icon: <FaChartLine className="w-8 h-8" />,
+      icon: <img src="/images/icons/ads-management.png" alt="Gestión de ADS" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Gestión de ADS",
       description: "Campañas publicitarias efectivas",
       features: ["Google Ads", "Facebook Ads", "Instagram Ads", "ROI tracking"],
@@ -77,37 +77,37 @@ const ServicesSection = () => {
 
   const benefits = [
     {
-      icon: <FaRocket className="w-8 h-8" />,
+      icon: <img src="/images/icons/growth.png" alt="Crecimiento" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Crecimiento Acelerado",
       description: "Aumenta tus ventas hasta un 300% en los primeros 6 meses",
       color: "from-blue-500 to-cyan-600"
     },
     {
-      icon: <FaUsers className="w-8 h-8" />,
+      icon: <img src="/images/icons/clients.png" alt="Clientes" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Más Clientes",
       description: "Atrae y convierte más clientes potenciales con estrategias probadas",
       color: "from-green-500 to-emerald-600"
     },
     {
-      icon: <FaTrophy className="w-8 h-8" />,
+      icon: <img src="/images/icons/competitive.png" alt="Ventaja Competitiva" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Ventaja Competitiva",
       description: "Destaca sobre tu competencia con tecnología de vanguardia",
       color: "from-bizon-blue to-bizon-accent"
     },
     {
-      icon: <FaClock className="w-8 h-8" />,
+      icon: <img src="/images/icons/time-save.png" alt="Ahorro de Tiempo" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Ahorro de Tiempo",
       description: "Automatiza procesos y enfócate en lo que realmente importa",
       color: "from-purple-500 to-pink-600"
     },
     {
-      icon: <FaShieldAlt className="w-8 h-8" />,
+      icon: <img src="/images/icons/guarantee.png" alt="Resultados Garantizados" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Resultados Garantizados",
       description: "Trabajamos hasta lograr tus objetivos o te devolvemos tu inversión",
       color: "from-red-500 to-pink-600"
     },
     {
-      icon: <FaHeadset className="w-8 h-8" />,
+      icon: <img src="/images/icons/support.png" alt="Soporte 24/7" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
       title: "Soporte 24/7",
       description: "Equipo dedicado disponible cuando lo necesites",
       color: "from-indigo-500 to-purple-600"
