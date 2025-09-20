@@ -2,6 +2,11 @@
 node_modules/
 */node_modules/
 
+# Python Virtual Environment
+venv/
+env/
+.venv/
+
 # Build outputs
 dist/
 */dist/
