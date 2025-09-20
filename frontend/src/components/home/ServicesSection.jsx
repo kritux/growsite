@@ -20,43 +20,43 @@ import {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <img src="/images/icons/social-media.png" alt="Redes Sociales" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/social-media.png" alt="Redes Sociales" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Gestión de Redes Sociales",
       description: "Manejo completo de redes sociales para tu negocio",
       features: ["Estrategia de contenido", "Diseño de posts", "Programación", "Análisis de resultados"],
-      color: "from-pink-500 to-purple-600",
-      bgColor: "bg-gradient-to-br from-pink-500/10 to-purple-600/10",
-      borderColor: "border-pink-500/20"
+      color: "from-bizon-blue to-bizon-dark-blue",
+      bgColor: "bg-gradient-to-br from-bizon-blue/10 to-bizon-dark-blue/10",
+      borderColor: "border-bizon-blue/20"
     },
     {
-      icon: <img src="/images/icons/crm-leads.png" alt="CRM e Integración" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/crm-leads.png" alt="CRM e Integración" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "CRM e Integración de Leads",
       description: "Automatiza y gestiona tus leads con GoHighLevel",
       features: ["Configuración GHL", "Automatización de leads", "Seguimiento de conversiones", "Integración completa"],
-      color: "from-blue-500 to-cyan-600",
-      bgColor: "bg-gradient-to-br from-blue-500/10 to-cyan-600/10",
-      borderColor: "border-blue-500/20"
+      color: "from-bizon-accent to-bizon-blue",
+      bgColor: "bg-gradient-to-br from-bizon-accent/10 to-bizon-blue/10",
+      borderColor: "border-bizon-accent/20"
     },
     {
-      icon: <img src="/images/icons/ai-automation.png" alt="AI Automatización" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/ai-automation.png" alt="AI Automatización" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "AI Automatización",
       description: "Automatiza procesos con inteligencia artificial",
       features: ["Chatbots inteligentes", "Automatización de emails", "Análisis predictivo", "Optimización automática"],
-      color: "from-green-500 to-emerald-600",
-      bgColor: "bg-gradient-to-br from-green-500/10 to-emerald-600/10",
-      borderColor: "border-green-500/20"
+      color: "from-bizon-dark-blue to-bizon-accent",
+      bgColor: "bg-gradient-to-br from-bizon-dark-blue/10 to-bizon-accent/10",
+      borderColor: "border-bizon-dark-blue/20"
     },
     {
-      icon: <img src="/images/icons/ai-agents.png" alt="AI Agents" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/ai-agents.png" alt="AI Agents" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "AI Agents",
       description: "Agentes inteligentes para tu negocio",
       features: ["Asistentes virtuales", "Análisis de datos", "Toma de decisiones", "Aprendizaje continuo"],
-      color: "from-indigo-500 to-purple-600",
-      bgColor: "bg-gradient-to-br from-indigo-500/10 to-purple-600/10",
-      borderColor: "border-indigo-500/20"
+      color: "from-bizon-blue to-bizon-accent",
+      bgColor: "bg-gradient-to-br from-bizon-blue/10 to-bizon-accent/10",
+      borderColor: "border-bizon-blue/20"
     },
     {
-      icon: <img src="/images/icons/web-development.png" alt="Desarrollo Web" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/web-development.png" alt="Desarrollo Web" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Desarrollo Web",
       description: "Sitios web modernos y funcionales",
       features: ["Diseño responsive", "Optimización SEO", "Integración de APIs", "Mantenimiento"],
@@ -65,7 +65,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-accent/20"
     },
     {
-      icon: <img src="/images/icons/ads-management.png" alt="Gestión de ADS" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/ads-management.png" alt="Gestión de ADS" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Gestión de ADS",
       description: "Campañas publicitarias efectivas",
       features: ["Google Ads", "Facebook Ads", "Instagram Ads", "ROI tracking"],
@@ -77,40 +77,40 @@ const ServicesSection = () => {
 
   const benefits = [
     {
-      icon: <img src="/images/icons/growth.png" alt="Crecimiento" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/growth.png" alt="Crecimiento" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Crecimiento Acelerado",
       description: "Aumenta tus ventas hasta un 300% en los primeros 6 meses",
-      color: "from-blue-500 to-cyan-600"
+      color: "from-bizon-blue to-bizon-dark-blue"
     },
     {
-      icon: <img src="/images/icons/clients.png" alt="Clientes" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/clients.png" alt="Clientes" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Más Clientes",
       description: "Atrae y convierte más clientes potenciales con estrategias probadas",
-      color: "from-green-500 to-emerald-600"
+      color: "from-bizon-accent to-bizon-blue"
     },
     {
-      icon: <img src="/images/icons/competitive.png" alt="Ventaja Competitiva" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/competitive.png" alt="Ventaja Competitiva" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Ventaja Competitiva",
       description: "Destaca sobre tu competencia con tecnología de vanguardia",
       color: "from-bizon-blue to-bizon-accent"
     },
     {
-      icon: <img src="/images/icons/time-save.png" alt="Ahorro de Tiempo" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/time-save.png" alt="Ahorro de Tiempo" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Ahorro de Tiempo",
       description: "Automatiza procesos y enfócate en lo que realmente importa",
-      color: "from-purple-500 to-pink-600"
+      color: "from-bizon-dark-blue to-bizon-accent"
     },
     {
-      icon: <img src="/images/icons/guarantee.png" alt="Resultados Garantizados" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/guarantee.png" alt="Resultados Garantizados" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Resultados Garantizados",
       description: "Trabajamos hasta lograr tus objetivos o te devolvemos tu inversión",
-      color: "from-red-500 to-pink-600"
+      color: "from-bizon-blue to-bizon-accent"
     },
     {
-      icon: <img src="/images/icons/support.png" alt="Soporte 24/7" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />,
+      icon: <img src="/images/icons/support.png" alt="Soporte 24/7" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
       title: "Soporte 24/7",
       description: "Equipo dedicado disponible cuando lo necesites",
-      color: "from-indigo-500 to-purple-600"
+      color: "from-bizon-accent to-bizon-dark-blue"
     }
   ];
 
