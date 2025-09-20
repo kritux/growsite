@@ -20,7 +20,7 @@ import {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <img src="/images/icons/social-media.png" alt="Redes Sociales" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaInstagram className="w-8 h-8" />,
       title: "Gestión de Redes Sociales",
       description: "Manejo completo de redes sociales para tu negocio",
       features: ["Estrategia de contenido", "Diseño de posts", "Programación", "Análisis de resultados"],
@@ -29,7 +29,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-blue/20"
     },
     {
-      icon: <img src="/images/icons/crm-leads.png" alt="CRM e Integración" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaUsers className="w-8 h-8" />,
       title: "CRM e Integración de Leads",
       description: "Automatiza y gestiona tus leads con GoHighLevel",
       features: ["Configuración GHL", "Automatización de leads", "Seguimiento de conversiones", "Integración completa"],
@@ -38,7 +38,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-accent/20"
     },
     {
-      icon: <img src="/images/icons/ai-automation.png" alt="AI Automatización" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaRobot className="w-8 h-8" />,
       title: "AI Automatización",
       description: "Automatiza procesos con inteligencia artificial",
       features: ["Chatbots inteligentes", "Automatización de emails", "Análisis predictivo", "Optimización automática"],
@@ -47,7 +47,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-dark-blue/20"
     },
     {
-      icon: <img src="/images/icons/ai-agents.png" alt="AI Agents" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaBrain className="w-8 h-8" />,
       title: "AI Agents",
       description: "Agentes inteligentes para tu negocio",
       features: ["Asistentes virtuales", "Análisis de datos", "Toma de decisiones", "Aprendizaje continuo"],
@@ -56,7 +56,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-blue/20"
     },
     {
-      icon: <img src="/images/icons/web-development.png" alt="Desarrollo Web" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaCode className="w-8 h-8" />,
       title: "Desarrollo Web",
       description: "Sitios web modernos y funcionales",
       features: ["Diseño responsive", "Optimización SEO", "Integración de APIs", "Mantenimiento"],
@@ -65,7 +65,7 @@ const ServicesSection = () => {
       borderColor: "border-bizon-accent/20"
     },
     {
-      icon: <img src="/images/icons/ads-management.png" alt="Gestión de ADS" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaChartLine className="w-8 h-8" />,
       title: "Gestión de ADS",
       description: "Campañas publicitarias efectivas",
       features: ["Google Ads", "Facebook Ads", "Instagram Ads", "ROI tracking"],
@@ -77,37 +77,37 @@ const ServicesSection = () => {
 
   const benefits = [
     {
-      icon: <img src="/images/icons/growth.png" alt="Crecimiento" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaRocket className="w-8 h-8" />,
       title: "Crecimiento Acelerado",
       description: "Aumenta tus ventas hasta un 300% en los primeros 6 meses",
       color: "from-bizon-blue to-bizon-dark-blue"
     },
     {
-      icon: <img src="/images/icons/clients.png" alt="Clientes" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaUsers className="w-8 h-8" />,
       title: "Más Clientes",
       description: "Atrae y convierte más clientes potenciales con estrategias probadas",
       color: "from-bizon-accent to-bizon-blue"
     },
     {
-      icon: <img src="/images/icons/competitive.png" alt="Ventaja Competitiva" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaTrophy className="w-8 h-8" />,
       title: "Ventaja Competitiva",
       description: "Destaca sobre tu competencia con tecnología de vanguardia",
       color: "from-bizon-blue to-bizon-accent"
     },
     {
-      icon: <img src="/images/icons/time-save.png" alt="Ahorro de Tiempo" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaClock className="w-8 h-8" />,
       title: "Ahorro de Tiempo",
       description: "Automatiza procesos y enfócate en lo que realmente importa",
       color: "from-bizon-dark-blue to-bizon-accent"
     },
     {
-      icon: <img src="/images/icons/guarantee.png" alt="Resultados Garantizados" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaShieldAlt className="w-8 h-8" />,
       title: "Resultados Garantizados",
       description: "Trabajamos hasta lograr tus objetivos o te devolvemos tu inversión",
       color: "from-bizon-blue to-bizon-accent"
     },
     {
-      icon: <img src="/images/icons/support.png" alt="Soporte 24/7" className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl shadow-lg" />,
+      icon: <FaHeadset className="w-8 h-8" />,
       title: "Soporte 24/7",
       description: "Equipo dedicado disponible cuando lo necesites",
       color: "from-bizon-accent to-bizon-dark-blue"
